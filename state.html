@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>State 实例</title>
+    <script src="bower_components/react/react.min.js"></script>
+    <script src="bower_components/react/react-dom.min.js"></script>
+    <script src="bower_components/babel/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+        var PassButton = React.createClass({
+            getInitialState:function () {
+                return {passed:false};
+            },
+            handleClick:function(event){
+                this.setState({passed: !this.state.passed});
+            },
+            render:function(){
+                var text = this.state.passed?'通过':'不通过';
+                return (
+                    <p onClick = {this.handleClick}>
+                        <b>{text}</b>(点我切换状态)
+                    </p>
+                );
+            }
+        });
+
+        ReactDOM.render(
+            <PassButton />,
+            document.getElementById('example')
+        );
+    </script>
+  </body>
+</html>
