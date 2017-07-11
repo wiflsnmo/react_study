@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello React!</title>
+        <script src="bower_components/react/react.min.js"></script>
+        <script src="bower_components/react/react-dom.min.js"></script>
+        <script src="bower_components/babel/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="example"></div>
+        <script type="text/babel">
+        var HelloMessage = React.createClass({
+            getInitialState: function(){
+                return {value: 'Perry'}
+            },
+            handleChange:function(event){
+                this.setState({value:event.target.value});
+            },
+            render:function(){
+                var value = this.state.value;
+                return <div>
+                           <input type="text" value={value} onChange={this.handleChange} />
+                           <h4>Hello,{value}</h4>
+                       </div>;             
+            }
+        });
+        ReactDOM.render(
+            <HelloMessage />,
+            document.getElementById('example')
+        );
+        </script>
+    </body>
+</html>
