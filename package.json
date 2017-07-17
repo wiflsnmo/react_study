@@ -1,0 +1,29 @@
+{
+  "name": "react_study",
+  "version": "1.0.0",
+  "description": "learn react",
+  "main": "index.js",
+  "dependencies": {
+    "rc-pagination": "^1.9.9",
+    "react-datepicker": "^0.49.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wiflsnmo/react_study.git"
+  },
+  "keywords": [
+    "12344321"
+  ],
+  "author": "perry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wiflsnmo/react_study/issues"
+  },
+  "homepage": "https://github.com/wiflsnmo/react_study#readme"
+}
